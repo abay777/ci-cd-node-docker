@@ -6,7 +6,7 @@ config({ path: `${path}/.env` });
 
 
 const app = express();
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 
 app.get('/', (req,res) => {
   return res.json({ data: "welcome to the world" })
