@@ -12,6 +12,11 @@ app.get('/', (req,res) => {
   return res.json({ data: "welcome to the world" })
 })
 
+app.get("/check",(req,res) => {
+const time  = new Date().getTime() 
+return res.json({currentTime:time})
+})
+
 app.listen(port, () => {
   console.log("succesfully running at port ", port)
 })
